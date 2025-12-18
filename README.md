@@ -8,25 +8,23 @@ How to contribute (step-by-step)
 
 1. Fork this repository and create a new branch for your profile.
 2. Add your portrait image to the `images/` folder. Recommended: square JPG/PNG, ~300–800px on the long edge. Example filename: `images/sourav-kumar.jpg`.
-3. Create a JSON file for your profile inside the `students/` folder. Copy the provided template `students/template.json` and save as `students/<your-id>.json` (for example `students/sourav-kumar.json`).
+3. Create a JSON file for your profile inside the `students/` folder. Copy the provided template `students/template.json` and save as `students/<your-roll>.json` (for example `students/002210501094.json`).
 4. Commit your changes and open a Pull Request to this repository. After review the maintainer will merge and your profile will appear on the site automatically.
-
-**Note:** The site automatically discovers all JSON files in the `students/` folder (excluding `template.json`) and displays them. No manual manifest updates are needed.
 
 Student JSON template and fields
 --------------------------------
 
 Each student JSON file should have the following fields:
 
-- `id` (string): a short identifier matching your filename (no spaces, lowercase).
+- `id` (string): your class roll number matching your filename (no spaces, lowercase).
 - `name` (string): full display name.
 - `image` (string): path to your image file, e.g. `images/sourav-kumar.jpg`.
 - `quote` (string): one short line about your experience (max ~140 chars recommended).
 
-Example `students/sourav-kumar.json`
+Example `students/002210501094.json`
 ```json
 {
-  "id": "sourav-kumar",
+  "id": "002210501094",
   "name": "Sourav Kumar",
   "image": "images/sourav-kumar.jpg",
   "quote": "Four years of challenges, coffee, and great friends."
@@ -35,12 +33,12 @@ Example `students/sourav-kumar.json`
 
 Tips
 ----
-- Keep image filenames unique and include your id.
+- Keep image filenames unique and include your name/id.
 - If unsure, open a draft PR and ask in the description.
 
 Site preview
 ------------
-After merging, GitHub Pages (or any static server) will serve the site at the repository URL. The homepage automatically discovers and loads all JSON files in the `students/` folder (excluding `template.json`) and renders the tiles.
+After merging, GitHub Pages will serve the site at the repository URL. The homepage automatically discovers and loads all JSON files in the `students/` folder (excluding `template.json`) and renders the tiles.
 
 Privacy / content
 -----------------
